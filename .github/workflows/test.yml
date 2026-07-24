@@ -47,7 +47,29 @@ jobs:
         run: |
           ls -la out
 
-      - name: Run binary
-        shell: bash
+      - name: Run binary on Linux/macOS
+        if: ${{ runner.os != 'Windows' }}
         run: |
           ./out/${{ matrix.bin }}
+        shell: bash
+
+      - name: Run binary on Windows
+        if: ${{ runner.os == 'Windows' }}
+        run: |
+          Write-Host "=== Running hello ==="
+          .\out\${{ matrix.bin }}
+          Write-Host "Exit code: $LASTEXITCODE"
+
+          Write-Host "=== Capture stdout/stderr ==="
+          .\out\${{ matrix.bin }} *> output.txt
+          Write-Host "Exit code after capture: $LASTEXITCODE"
+
+          Write-Host "=== Output file ==="
+          if (Test-Path output.txt) {
+            Get-Content output.txt
+          } else {
+            Write-Host "output.txt was not created"
+          }
+
+          Write-Host "=== Done ==="
+        shell: pwsh
