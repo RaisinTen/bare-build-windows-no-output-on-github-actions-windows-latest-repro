@@ -1,4 +1,4 @@
-name: bare-build-windows-no-output-on-github-actions-windows-latest-repro
+name: build
 
 on:
   push:
