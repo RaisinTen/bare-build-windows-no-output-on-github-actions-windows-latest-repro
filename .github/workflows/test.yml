@@ -50,7 +50,14 @@ jobs:
       - name: Run binary on Linux/macOS
         if: ${{ runner.os != 'Windows' }}
         run: |
+          echo "=== Running hello ==="
           ./out/${{ matrix.bin }}
+          echo "Exit code: $?"
+
+          echo "=== ran.txt file ==="
+          cat ran.txt
+
+          echo "=== Done ==="
         shell: bash
 
       - name: Run binary on Windows
@@ -59,6 +66,9 @@ jobs:
           Write-Host "=== Running hello ==="
           .\out\${{ matrix.bin }}
           Write-Host "Exit code: $LASTEXITCODE"
+
+          Write-Host "=== ran.txt file ==="
+          Get-Content ran.txt
 
           Write-Host "=== Capture stdout/stderr ==="
           .\out\${{ matrix.bin }} *> output.txt
