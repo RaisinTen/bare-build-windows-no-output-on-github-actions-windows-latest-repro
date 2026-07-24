@@ -18,6 +18,9 @@ jobs:
           - os: windows-latest
             host: win32-x64
             bin: hello.exe
+          - os: windows-11-arm
+            host: win32-arm64
+            bin: hello.exe
 
     runs-on: ${{ matrix.os }}
 
