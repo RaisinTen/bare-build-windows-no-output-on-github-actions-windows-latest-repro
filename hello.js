@@ -16,4 +16,8 @@ const output = `I ran\n${stats}\n`
 
 require('bare-fs').writeFileSync('ran.txt', output)
 
+const tty = require('bare-tty')
+const stdout = new tty.WriteStream(1)
+stdout.write('Hello from tty!\n')
+
 console.log('Bye, world!')
