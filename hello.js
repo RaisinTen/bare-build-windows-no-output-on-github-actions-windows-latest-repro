@@ -1,3 +1,6 @@
 console.log('Hello, world!')
 require('bare-fs').writeFileSync('ran.txt', 'I ran\n')
 console.log('Bye, world!')
+const p = require('bare-process')
+p.stdout.write('stdout\n')
+p.stderr.write('stderr\n')

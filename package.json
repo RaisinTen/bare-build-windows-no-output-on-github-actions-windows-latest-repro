@@ -12,5 +12,8 @@
   "type": "commonjs",
   "devDependencies": {
     "bare-build": "^1.0.2"
+  },
+  "dependencies": {
+    "bare-process": "^4.5.1"
   }
 }
