@@ -1,0 +1,16 @@
+{
+  "name": "bare-build-windows-no-output-on-github-actions-windows-latest-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "bare-build": "^1.0.2"
+  }
+}
