@@ -1,4 +1,4 @@
-name: bare-build-windows-no-output-on-github-actions-windows-latest-repro
+name: build
 
 on:
   push:
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 22
 
-      - run: npm install
+      - run: npm ci
 
       - name: Build
         shell: bash
