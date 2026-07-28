@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "bare-build": "github:holepunchto/bare-build#fix-windows-stdio-redirect"
+    "bare-build": "1.0.4"
   },
   "dependencies": {
     "bare-process": "^4.5.1"
