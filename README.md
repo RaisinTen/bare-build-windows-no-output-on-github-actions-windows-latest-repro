@@ -1,5 +1,7 @@
 # Repro: `bare-build` 1.0.2 produces standalone binaries with no output on GitHub Actions `windows-latest`
 
+Reproducible for issue: https://github.com/holepunchto/bare-build/issues/39
+
 Create a JS app script.
 
 `hello.js`:
